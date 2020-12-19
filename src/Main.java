@@ -1,19 +1,19 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("What is Lessley's favorite animal?\n" +
+                            "Zebra\n" +
+                            "Llama\n" +
+                            "Horse\n");
         Scanner input = new Scanner(System.in);
-        boolean isOnRepeat = true;
 
-        while (isOnRepeat) {
-            System.out.println("Playing current song");
-            System.out.println("Would you like to take the song off repeat?");
-            String userInput = input.next();
-
-            if (userInput.equals("yes")) {
-                isOnRepeat = false;
-            }
+        if (input.next().toLowerCase(Locale.ROOT).equals("llama")) {
+            System.out.println("Wow! You got it dude.");
         }
-        System.out.println("Playing next song");
+        else {
+            System.out.println("WRONG! Better luck next time.");
+        }
     }
 }
